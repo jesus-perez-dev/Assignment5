@@ -1,17 +1,32 @@
+/*
+ * Jesus Perez Santiago
+ * 000772575
+ * I, Jesus Perez Santiago, student number 000772575, certify that all code submitted is my own work; that I have not
+ * copied it from any other source. I also certify that I have not allowed my work to be copied by others.
+ */
+
 using System;
-using System.ComponentModel;
 using NUnit.Framework;
 using Problem2;
 
 namespace TestProblem2
 {
+    /// <summary>
+    /// Tests for problem 2
+    /// </summary>
     public class Tests
     {
+        /// <summary>
+        /// Setup for tests
+        /// </summary>
         [SetUp]
         public void Setup()
         {
         }
 
+        /// <summary>
+        /// Tests if an empty computer is built with the builder
+        /// </summary>
         [Test]
         public void ShouldBuildEmptyComputer()
         {
@@ -26,6 +41,9 @@ namespace TestProblem2
             Assert.Null(computer.Case);
         }
         
+        /// <summary>
+        /// Tests if a full computer is built with a builder
+        /// </summary>
         [Test]
         public void ShouldBuildFullComputerWithBuilder()
         {
@@ -46,6 +64,9 @@ namespace TestProblem2
             Assert.NotNull(computer.Case);
         }
 
+        /// <summary>
+        /// Tests if a full computer is built using the director
+        /// </summary>
         [Test]
         public void ShouldBuildFullComputerUsingDirector()
         {
@@ -67,6 +88,9 @@ namespace TestProblem2
             Assert.NotNull(computer.Case);
         }
 
+        /// <summary>
+        /// Tests if a full computer is built using chained methods on the builder
+        /// </summary>
         [Test]
         public void ShouldBuildFullComputerWithBuilderChainedMethods()
         {
@@ -86,6 +110,9 @@ namespace TestProblem2
             Assert.NotNull(computer.Case);
         }
         
+        /// <summary>
+        /// Tests if an error is thrown if some number is less than 0
+        /// </summary>
         [Test]
         public void ShouldThrowErrorOnInvalidNumberArgument()
         {
@@ -95,6 +122,9 @@ namespace TestProblem2
             Assert.AreEqual("Capacity must be greater than 0",exception.Message);
         }
         
+        /// <summary>
+        /// Tests if an error is thrown if some string is an incorrect value
+        /// </summary>
         [Test]
         public void ShouldThrowErrorOnInvalidStringArgument()
         {
